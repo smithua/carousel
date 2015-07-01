@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>Slider</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="slider_body">
+        <div class="slider_row_items_wrap">
+            <div class="slider_row_items_wrap2" id="target2"></div>
+        </div>
+        <div class="slider_rows_wrap" id="target"></div>
+    </div>
+    <!-- SCRIPTS -->
+    <script type="text/template" id="imageArray">
+            <% _.each(items,function(item,key) {
+                key++;
+            %>
+                <div class="slider_row_block" id="slider_row_block<%- key %>">
+                    <div class="slider_row_block_items_wrap">
+                        <div class="slider_row_block_item nav_button active"></div>
+                        <div class="slider_row_block_item nav_button"></div>
+                        <div class="slider_row_block_item nav_button"></div>
+                        <div class="slider_row_block_item nav_button"></div>
+                        <div class="slider_row_block_item nav_button"></div>
+                        <div class="slider_row_block_item nav_button"></div>
+                        <div class="slider_row_block_item nav_button"></div>
+                        <div class="slider_row_block_item nav_button"></div>
+                    </div>
+                    <div class="slider_row_block_image-wrap">
+                        <div class="slider_row_block_image active" style="background-image: url(<%= item.img2 %>);"></div>
+                        <div class="slider_row_block_image" style="background-image: url(<%= item.img %>);"></div>
+                        <div class="slider_row_block_image" style="background-image: url(<%= item.img7 %>);"></div>
+                        <div class="slider_row_block_image" style="background-image: url(<%= item.img4 %>);"></div>
+                        <div class="slider_row_block_image" style="background-image: url(<%= item.img5 %>);"></div>
+                        <div class="slider_row_block_image" style="background-image: url(<%= item.img8 %>);"></div>
+                        <div class="slider_row_block_image" style="background-image: url(<%= item.img3 %>);"></div>
+                        <div class="slider_row_block_image" style="background-image: url(<%= item.img6 %>);"></div>
+                    </div>
+                </div>
+            <% }); %>
+    </script>
+
+    <script type="text/template" id="imageArray2">
+            <% _.each(items,function(item,key) {
+                key++;
+            %>
+            <div class="slider_row_item nav_button" id="slider_row_item<%- key %>"></div>
+            <% }); %>
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/array.js"></script>
+</body>
+</html>
