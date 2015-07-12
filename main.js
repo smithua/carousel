@@ -58,7 +58,7 @@ var carousel = {
   setEvent: function () {
     var _this = this;
 
-    $(document).on('keydown', function (e) {
+    $(document).on('keyup', function (e) {
       _this.setParams();
       if (undefined !== _this.controls[e.which]) {
         e.preventDefault();
@@ -70,7 +70,7 @@ var carousel = {
   },
 
   removeEvent: function () {
-    $(document).off('keydown');
+    $(document).off('keyup');
     return this;
   },
 
