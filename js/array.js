@@ -46,7 +46,7 @@ var items = [
         img4: "img/img4.jpg",
         img5: "img/img5.jpg",
         img6: "img/img6.jpg",
-        img7: "img/img7.jpg"
+        img7: "img/img7.jpg",
         img8: "img/img8.jpg"
     },
     {
